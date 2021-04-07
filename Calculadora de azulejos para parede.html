@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Calculadora de azulejos para parede </title>
+		<meta charset="utf-8">
+		<h1> Calculadora de azulejos para parede</h1>
+	</head>
+	<body>
+		<h2> Parede (medidas em metro) </h2>
+		Altura: <input type="text" name="num1" id="num1Id" placeholder="Digite"/>
+		<br/>
+		Largura: <input type="text" name="num2" id="num2Id" placeholder="Digite"/>
+		<br/>
+		<input type="button" value="Resultado" id="btn-Resultado1"/>
+		<h2> Azulejo (medidas em metro) </h2>
+		Altura: <input type="text" name="num3" id="num3Id" placeholder="Digite"/>
+		<br/>
+		Largura: <input type="text" name="num4" id="num4Id" placeholder="Digite"/>
+		<br/>
+		<input type="button" value="Resultado" id="btn-Resultado2"/>
+		<script type="text/javascript">
+			document.getElementById('btn-Resultado1').addEventListener('click', function() {
+				var área_parede = Number (document.getElementById('num1Id').value)*
+								  Number (document.getElementById('num2Id').value);
+				function multiplicaçãoDoisNumeros (primeiro, segundo) {
+					var resultado = primeiro * segundo;
+					return resultado;
+				}
+				alert('Área total: ' + área_parede);
+				
+			document.getElementById('btn-Resultado2').addEventListener('click', function() {
+				var área_azulejo = Number (document.getElementById('num3Id').value)*
+								   Number (document.getElementById('num4Id').value);
+				function multiplicaçãoDoisNumeros (primeiro, segundo) {
+					var resultado = primeiro * segundo;
+					return resultado;
+				}
+				alert('Área total: ' + área_azulejo);
+				alert('Azulejos necessários: ' + área_parede/área_azulejo)
+				})})
+		</script>
+	</body>
+</html>
+			
